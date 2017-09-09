@@ -8,7 +8,7 @@ class hx_apache::config () inherits hx_apache {
         default_vhost    => false,
         default_mods     => $hx_apache::default_mods,
         serveradmin      => $hx_apache::server_admin,
-        server_signature => 'Off',
+        server_signature => false,
         mpm_module       => 'prefork',
     }
 
@@ -29,7 +29,7 @@ class hx_apache::config () inherits hx_apache {
     # Secure SSL configuration (based on https://ssllabs.com)
     class {'apache::mod::ssl':
         ssl_cipher           => $hx_apache::ssl_cipher,
-        ssl_honorcipherorder => 'On',
+        ssl_honorcipherorder => true,
         ssl_protocol         => $hx_apache::ssl_protocol,
         ssl_compression      => false,
     }
