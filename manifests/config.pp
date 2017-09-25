@@ -32,9 +32,9 @@ class hx_apache::config () inherits hx_apache {
     ssl_honorcipherorder       => true,
     ssl_protocol               => $hx_apache::ssl_protocol,
     ssl_compression            => false,
-    ssl_stapling               => true,
-    ssl_stapling_return_errors => false,
-    stapling_cache             => '/var/run/ocsp(128000)'
+#    ssl_stapling               => true,
+#    ssl_stapling_return_errors => false,
+#    stapling_cache             => '/var/run/ocsp(128000)'
   }
 
   ##
