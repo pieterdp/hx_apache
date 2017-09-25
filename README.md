@@ -56,9 +56,9 @@ The base class.
 
 #### Parameters
 
-* `ssl_cipher`: string of supported SSL ciphers. Uses the same syntax as the Apache configuration file. Default value is `CDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA`.
+* `ssl_cipher`: string of supported SSL ciphers. Uses the same syntax as the Apache configuration file. Default value is `ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256`.
 
-* `ssl_protocol`: array of supported SSL protocols. Uses the same syntax as the Apache configuration file. Default value is `['all', '-SSLv2', '-SSLv3']`.
+* `ssl_protocol`: array of supported SSL protocols. Uses the same syntax as the Apache configuration file. Default value is `['all', '-SSLv2', '-SSLv3' '-TLSv1', '-TLSv1.1']`.
 
 * `default_mods`: array of modules that are loaded by default. Uses [puppetlabs-apache syntax](https://forge.puppet.com/puppetlabs/apache#default_mods). By default set to `['auth_basic', 'setenvif', 'headers', 'env', 'authz_user', 'alias', 'autoindex', 'mime', 'rewrite', 'authn_file', 'negotiation', 'access_compat', 'deflate', 'authn_core', 'dir']`.
 
