@@ -20,6 +20,10 @@ class hx_apache::params () {
         'authn_core',
         'dir'
     ]
-    $server_admin = "${::networking['hostname']}@${::networking['domain']}"
+    if $::networking {
+        $server_admin = "${::networking['hostname']}@${::networking['domain']}"
+    } else {
+        $server_admin = "${::hostname}@${::domain}"
+    }
     $enable_php = false
 }
